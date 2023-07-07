@@ -1,0 +1,116 @@
+/**
+ * @name ClearVision
+ * @author ClearVision Team
+ * @version 6.3.0
+ * @description Highly customizable theme for BetterDiscord.
+ * @source https://github.com/ClearVision/ClearVision-v6
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+
+/* Credits to Zerthox for making the original theme. */
+
+/* IMPORT CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+@import url(https://clearvision.github.io/ClearVision-v6/main.css);
+
+/* SETTINGS */
+:root {
+  /* ACCENT COLORS */
+  --main-color: #E69927;
+  --hover-color: #B3771E;
+  --success-color: #43b581;
+  --danger-color: #982929;
+  --url-color: var(--main-color);
+
+  /* STATUS COLORS */
+--online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+
+  /* GENERAL */
+  --main-font: Montserrat;
+  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+  --text-normal: rgb(220, 221, 222); /* color of default discord text */
+  --text-muted: rgb(114, 118, 125); /* color of default discord muted text (e.g.text found in input fields before typing).*/
+  --channels-width: 280px;
+  --members-width: 240px;
+
+  /* APP BACKGROUND */
+  --background-shading: 100%;
+  --background-overlay: rgba(0,0,0,0.6);
+  --background-image: url('https://clearvision.github.io/images/amber.jpg');
+  --background-position: center; /* app background position [default: center] */
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --background-attachment: fixed;
+  --background-brightness: 100%; 
+  --background-contrast: 110%; /* app background contrast [default: 100%] */
+  --background-saturation: 105%; /* app background saturation [default: 100%] */
+  --background-invert: 0%; /* app background invert (0 - 100%)  [default: 0%] */
+  --background-grayscale: 0%; /* app background grayscale ( 0 - 100%) [default: 0%] */
+  --background-sepia: 0%; /* app background sepia (0 - 100%) [default: 0%] */
+  --background-blur: 0px; /* app background blur [default: 0px] */
+
+  /* HOME BUTTON ICON */
+  --home-icon: url('https://cdn.discordapp.com/avatars/297785282063892480/279537b89ba6538533894bb7c0b6e889.png');
+  --home-position: center; /* home button icon position [default: center] */
+  --home-size: 50px; /* home button icon size [default: 40px] */
+
+  /* CHANNEL COLORS */
+  --channel-unread: var(--main-color); /* Unread Server channel color. [default:  var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
+  --channel-color: rgba(255, 255, 255, 0.3); /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
+  --channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
+  --muted-color: rgba(255, 255, 255, 0.1); /*Muted channel color  [default: rgba(255,255,255,0.1);]*/
+
+  /* MODAL BACKDROP */
+  --backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
+  --backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS) [default: var(--background-image)] */
+  --backdrop-position: var(--background-position); /* modal backdrop position [default: var(--background-position)] */
+  --backdrop-size: var(--background-size); /* modal backdrop size [default: var(--background-size)] */
+  --backdrop-repeat: var(--background-repeat); /* modal backdrop repeat [default: var(--background-repeat)] */
+  --backdrop-attachment: var(--background-attachment); /* modal backdrop attachment [default: var(--background-attachment)] */
+  --backdrop-brightness: var(--background-brightness); /* modal backdrop brightness (< 100% for darken, > 100% for lighten) [default: var(--background-brightness)] */
+  --backdrop-contrast: var(--background-contrast); /* modal backdrop contrast [default: var(--background-contrast)] */
+  --backdrop-saturation: var(--background-saturation); /* modal backdrop saturation [default: var(--background-saturation)] */
+  --backdrop-invert: var(--background-invert); /* modal backdrop invert (0 - 100%)  [default: var(--background-invert)] */
+  --backdrop-grayscale: var(--background-grayscale); /* modal backdrop grayscale ( 0 - 100%) [default: var(--background-grayscale)] */
+  --backdrop-sepia: var(--background-sepia); /* modal backdrop sepia (0 - 100%) [default: var(--background-sepia)] */
+  --backdrop-blur: var(--background-blur); /* modal backdrop blur [default: var(--background-blur)] */
+
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: url('https://clearvision.github.io/images/amber.jpg');
+  --user-popout-position: 550px 100px;
+  --user-popout-size: cover;
+  --user-popout-repeat: no-repeat;
+  --user-popout-attachment: fixed;
+  --user-popout-brightness: 100%;
+  --user-popout-contrast: 100%;
+  --user-popout-saturation: 100%;
+  --user-popout-grayscale: 0%;
+  --user-popout-invert: 0%;
+  --user-popout-blur: 2px;  
+  --user-popout-sepia: var(--background-sepia); /* user popout background sepia (0 - 100%) [default: var(--background-sepia)] */
+  --user-popout-overlay: rgba(0, 0, 0, 0.6); /* user popout overlay color [default: rgba(0, 0, 0, .6)] */
+
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: url('https://clearvision.github.io/images/amber.jpg');
+  --user-modal-position: 240px 200px;
+  --user-modal-size: cover;
+  --user-modal-repeat: no-repeat;
+  --user-modal-attachment: fixed;
+  --user-modal-brightness: 100%;
+  --user-modal-contrast: 100%;
+  --user-modal-saturation: 100%;
+  --user-modal-grayscale: 0%;
+  --user-modal-invert: 0%;
+  --user-modal-blur: 2px;  
+  --user-modal-sepia: var(--background-sepia);
+
+  /* THEME BD COLORS */
+  --bd-blue: var(--main-color); /* betterdiscord main color [default: var(--main-color)] */
+  --bd-blue-hover: var(--hover-color); /* betterdiscord hover color [default: var(--hover-color)] */
+  --bd-blue-active: var(--hover-color); /* betterdiscord active color [default: var(--hover-color)] */
+}
